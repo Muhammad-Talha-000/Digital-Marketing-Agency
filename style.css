@@ -82,6 +82,7 @@ header{
     display: flex;
     /* justify-content: space-between; */
     padding-top: 12.5rem;
+    padding-bottom: 5rem;
     gap: 3rem;
 }
 .s1child1{
@@ -111,7 +112,7 @@ header{
     transition-duration: .5s;
     cursor: pointer;
 }
-.s1child1text:hover{
+.s1child1text:hover, .flowtext:hover{
     font-weight: 700;
     background-color: rgb(221, 226, 239);
 }
@@ -183,7 +184,7 @@ header{
 .c3flex, .lineflex{
     display: flex;
     flex-direction: row;
-    gap: 3rem;
+    gap: 2rem;
 }
 .flexbox{
     width: 100%;
@@ -199,6 +200,7 @@ header{
 .box{
     color: rgb(126 117 117);
     width: 100%;
+    font-size: 15px;
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
     padding-left: 1rem;
@@ -209,7 +211,7 @@ header{
 }
 .child3flexrow{
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
     margin-top: 2rem;
 }
 .option{
@@ -220,10 +222,18 @@ header{
 }
 .flexrowtext{
     line-height: 22px;
-    font-size: 1.125rem;
+    font-size: 1.1rem;
     padding-bottom: 0.5rem;
     width: 100%;
+    border: none;
+    cursor: pointer;
 }
+/* .flexrowtext:focus, option{
+    border: none;
+}
+.flexrowtext:hover{
+    border: none;
+} */
 .child3button{
     display: flex;
     justify-content: center;
@@ -244,11 +254,16 @@ header{
     border: none;
 }
 .section2{
-    padding-top: 5rem;
-    margin: 0 4rem;
+    margin: 0 3.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #181e4e;
+}
+.blueline{
+    margin-bottom: 0.5rem;
+    border: 2px solid rgb(0 102 186);
+    width: 60px;
 }
 .sec2pic{
     height: 100%;
@@ -259,7 +274,6 @@ header{
 .sec2main{
     width: 100%;
     height: 100%;
-    background-color: #181e4e;
     padding-right: 7rem;
     padding-bottom: 5rem;
     padding-top: 6rem;
@@ -281,9 +295,12 @@ header{
     cursor: pointer;
     background-color: #ffc145;
 }
+.flowing{
+    display: none;
+}
 .section3{
     position: relative;
-    padding: 8rem 4rem;
+    padding: 8rem 3.5rem;
     width: 100%;
     display: flex;
 }
@@ -291,6 +308,7 @@ header{
     z-index: 2;
     width: 100%;
     padding-right: 6rem;
+    padding-top: 2.5rem;
 }
 .sec3top{
     font-family: "DM Sans",sans-serif;
@@ -406,7 +424,7 @@ header{
     right: 0;
 }
 .section6{
-    margin: 3.5rem 5rem;   
+    margin: 3.5rem;   
 }
 .sec6text{
     font-family: "Lato",sans-serif;
@@ -417,7 +435,7 @@ header{
 }
 .section7{
     display: flex;
-    margin: 0 4rem 3rem 4rem;
+    margin: 0 3.5rem 3rem 3.5rem;
     background-color: #181e4e;
 }
 .sec7main{
@@ -537,6 +555,32 @@ footer{
     border-color: transparent;
     cursor: pointer;
 }
+.flagdiv{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    bottom: unset!important;
+    top: 22px!important;
+    left: 16px!important;
+    border: unset!important;
+}
+.arrow{
+    position: relative;
+    top: 50%;
+    margin-top: -2px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 4px solid #555;
+}
+
+
+
+
 
 @media screen and (max-width: 1280px) {
     .section1{
@@ -569,23 +613,29 @@ footer{
     }
 }
 @media screen and (max-width: 1101px) {
-    .s1child2text{
-        text-align: center;
+    .s1child1{
+        display: none;
     }
     .section1{
+        padding: 2rem;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
     }
     .s1child2{
+        padding-top: 7rem;
         justify-content: center;
-        align-items: center;
         display: flex;
         flex-direction: column;
         max-width: fit-content;
     }
-    .s1child2text{
-        padding: 0 3rem;
+    .s1child2head{
+        font-size: 32px;
+        line-height: 34px;
+    }
+    .s1child2text{  
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        padding-right: 0;
     }
     .sec3absolute{
         display: none;
@@ -607,6 +657,23 @@ footer{
     }
     .sec7main{
         width: 100%;
+    }
+    .flowing{
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        overflow-x: scroll;
+        column-gap: 0.5rem;
+        margin: 1.5rem 0;
+    }
+    .flowtext{
+        width: 100%;
+        padding: 0.75rem 1.25rem;
+        border: 1px solid lightgray;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        transition-duration: .5s;
+        cursor: pointer;
     }
 }
 @media screen and (max-width: 1020px) {
