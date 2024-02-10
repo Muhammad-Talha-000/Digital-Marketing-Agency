@@ -68,7 +68,7 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 18px 3.5rem;
-    box-shadow: 1px 2px 10px lightgray;
+    border-bottom: 0.5px solid lightgray;
 }
 .f2text{
     font-family: "Montserrat",sans-serif;
@@ -228,12 +228,6 @@ header{
     border: none;
     cursor: pointer;
 }
-/* .flexrowtext:focus, option{
-    border: none;
-}
-.flexrowtext:hover{
-    border: none;
-} */
 .child3button{
     display: flex;
     justify-content: center;
@@ -439,7 +433,7 @@ header{
     background-color: #181e4e;
 }
 .sec7main{
-    padding: 85px 50px;
+    padding: 85px 65px;
     width: 50%;
 }
 .sec7head{
@@ -448,6 +442,14 @@ header{
     color: #fff;
     font-family: "Lato",sans-serif;
     font-weight: 900;
+}
+.sec7head2{
+    font-size: 4.5rem;
+    line-height: 1;
+    color: #fff;
+    font-family: "Lato",sans-serif;
+    font-weight: 900;
+    color: rgb(250 204 21);
 }
 
 footer{
@@ -481,7 +483,7 @@ footer{
     line-height: 1.5;
     font-weight: 900;
     font-size: 1rem;
-    margin: 0.5rem 0;
+    margin: 0.7rem 0;
 }
 .footertext{
     width: 13rem;
@@ -493,21 +495,24 @@ footer{
     cursor: pointer;
 }
 .footerbutton{
+    margin-top: .5rem;
+    background: transparent;
     padding: 0.25rem 0.5rem;
     border: 1px solid lightgray;
     height: 26px;
     width: 13rem;
 }
 .buttontext{
+    font-size: smaller;
     text-align: left;
     color: rgb(147, 147, 147);
 }
 .footermidsec{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #f8f8ff;
     width: 100%;
-    padding: 1.25rem 4rem;
+    padding: 1.25rem 3.5rem;
     border-top: 1px solid;
     border-bottom: 1px solid;
     border-color: lightgray;
@@ -650,7 +655,7 @@ footer{
         padding-right: 0;
     }
     .section6{
-        margin: 1rem 1rem;
+        margin: 3rem 1.5rem 2rem 1.5rem;
     }
     .section7{
         flex-direction: column; 
@@ -677,12 +682,20 @@ footer{
     }
 }
 @media screen and (max-width: 1020px) {
+    .sec7head, .sec7head2{
+        font-size: 45px;
+        line-height: 29px;
+        font-weight: 900;
+    }
+    .request-button{
+        padding: 4px 8px;
+        font-size: 11px;
+    }
     .s1child1{
         width: 80%
     }
-    .flexes{
-        text-align: center;
-        align-items: center;
+    .fixed1{
+        padding: 0.75rem 1.5rem;
     }
     .headerflex{
         gap: 15px;
@@ -692,23 +705,34 @@ footer{
     }
     .section3{
         flex-direction: column;
-        padding: 4rem 4rem;
+        padding: 0 0 2rem 0;
     }
     .sec3text{
-        text-align: center;
+        text-align: start;
     }
     .sec3main{
+        padding-left: 1.5rem;
+        padding-top: 5rem;  
         justify-content: center;
-        align-items: center;
+        align-items: start;
         display: flex;
         flex-direction: column;
         margin-bottom: 3rem;
+    }
+    .section7{
+        margin: 3rem 0;
+    }
+    .sec7main{
+        padding: 3rem 1.5rem;
     }
 }
 @media screen and (max-width: 840px) {
     .midchild1{
         flex-direction: column;
         margin-bottom: 1.5rem;
+    }
+    .section2{
+        margin: 0;  
     }
 }
 @media screen and (max-width:740px){
@@ -719,18 +743,6 @@ footer{
 @media screen and (max-width: 640px) {
     .sec7head{
         font-size: 3.5rem;
-    }
-    .section3, .sec2main{
-        padding: 2rem 2rem;
-    }
-    .section2{
-        margin: 0 2rem;
-    }
-    .section7{
-        margin: 2rem 2rem;
-    }
-    .sec7main{
-        padding: 1.5rem 1.5rem;
     }
 }
 @media screen and (max-width: 520px) {
@@ -768,22 +780,18 @@ footer{
     .sec2button{
         padding: 0.5rem 1.5rem;
     }
-    .sec3top{
-        text-align: center;
-    }
 }
 @media screen and (max-width: 460px) {
     .flexrow{
         display: none;
     }
     .sec3button{
-        width: 100%;
+        width: 95%;
         text-align: center;
     }
     .sec3text, .sec2text{
         font-size: medium;
         margin: 0 0 15px 0;
-        text-align: center;
         line-height: 25px;
     }
     .child3flexrow{
@@ -823,10 +831,8 @@ footer{
     }
     .sec3top{
         line-height: 30px;
-        text-align: center;
     }
     .sec3head{
-        text-align: center;
         font-size: x-large;
         line-height: 30px;
     }
