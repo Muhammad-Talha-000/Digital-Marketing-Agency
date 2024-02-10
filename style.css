@@ -451,6 +451,7 @@ footer{
     justify-content: center;
     width: 100%;
     padding: 0 10px;
+    margin-bottom: 1rem;
 }
 .flexes{
     display: flex;
@@ -520,11 +521,21 @@ footer{
 }
 .footerend{
     font-family: "Lato",sans-serif;
-    line-height: 1.25;
+    line-height: 1.5;
     font-weight: 400;
     font-size: .875rem;
     text-align: center;
     padding: 1.5rem 0.5rem;
+}
+.signbutton{
+    width: 150px;
+    height: 28px;
+    font-family: inherit;
+    font-weight: 700;
+    margin: 0.5rem 0;
+    background-color: rgb(231 232 243);
+    border-color: transparent;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1280px) {
@@ -558,6 +569,9 @@ footer{
     }
 }
 @media screen and (max-width: 1101px) {
+    .s1child2text{
+        text-align: center;
+    }
     .section1{
         flex-direction: column;
         justify-content: center;
@@ -601,6 +615,7 @@ footer{
     }
     .flexes{
         text-align: center;
+        align-items: center;
     }
     .headerflex{
         gap: 15px;
