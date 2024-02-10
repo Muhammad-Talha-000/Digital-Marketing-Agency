@@ -744,6 +744,15 @@ footer{
     .sec7head{
         font-size: 3.5rem;
     }
+    .sec2main{
+        padding: 2rem;
+    }
+    .sec2button{
+        padding: 1rem;
+    }
+    .sec2text{
+        margin-bottom: 1.5rem;
+    }
 }
 @media screen and (max-width: 520px) {
     .s1child1{
